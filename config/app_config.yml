@@ -9,6 +9,6 @@ test:
   google_secret: "bjtcLwKM8bWdgLBu7AXGmKGj"
 
 production:
-  pockect: "19756-0fd0cddd9a3d3a85f1a47074"
+  pocket: "19756-0fd0cddd9a3d3a85f1a47074"
   google_client: "222795100413-rcgqhu4qt865174qo6ikcprntcf3o32k.apps.googleusercontent.com"
   google_secret: "jcrljS5CkSEh49NHx1aFwhZq"
