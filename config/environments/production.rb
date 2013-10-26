@@ -79,5 +79,5 @@ EmailLang::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   #Set the google analytics account
-  config.middleware.use Rack::GoogleAnalytics, :tracker => ''
+  # config.middleware.use Rack::GoogleAnalytics, :tracker => ''
 end
