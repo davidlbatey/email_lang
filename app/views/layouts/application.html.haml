@@ -7,14 +7,17 @@
   %body
 
     %nav.navbar.navbar-default
-      .navbar-header
-        .navbar-brand Email Lang | Super charging your inbox
+      .container
+        .row
+          .col-xs-12
+            .navbar-header
+              .navbar-brand Email Lang | Super charging your inbox
 
-      %ul.nav.navbar-nav
-        %li
-          %a.active Your whitelist
-        %li
-          %a Ac
+            %ul.nav.navbar-nav
+              %li
+                = link_to "Your whitelist", contacts_path
+              %li
+                = link_to "Your accounts", ''
 
     .container
       .row

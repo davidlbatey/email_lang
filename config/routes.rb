@@ -3,5 +3,7 @@ EmailLang::Application.routes.draw do
              :controllers => {
                :omniauth_callbacks => "users/omniauth_callbacks"
              }
+  resources :contacts
+
   root to: 'pages#home'
 end

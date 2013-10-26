@@ -1,0 +1,17 @@
+%h1 Your contacts
+%p People you add here will be able to push content to your personal feeds.
+
+
+- if @contacts.any?
+  %table
+    - @contacts.each do |contact|
+      %tr
+        %td= contact.email
+        %td= link_to 'Remove', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  %br
+- else
+  In order to supercharge your inbox you'll need to add a contact.
+
+%h3 Add another contact
+= render 'form'
