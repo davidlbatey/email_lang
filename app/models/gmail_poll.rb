@@ -6,23 +6,27 @@ class GmailPoll
   end
 
   def start
-    imap      = Net::IMAP.new('imap.gmail.com', 993, usessl = true,
-                          certs = nil, verify = false)
+    @imap = Net::IMAP.new('imap.gmail.com', 993, usessl = true,
+                       certs = nil, verify = false)
 
-    imap.authenticate('XOAUTH2', @user.email, @user.token)
-    imap.select('INBOX')
+    @imap.authenticate('XOAUTH2', @user.email, @user.token)
+    @imap.select('INBOX')
 
-    imap.search(["SINCE", Date.today.strftime('%d-%b-%Y')]).each do |email_id|
-      message = imap.fetch(email_id,'RFC822')[0].attr['RFC822']
+    @imap.search(["SINCE", Date.today.strftime('%d-%b-%Y')]).each do |email_id|
+      message = @imap.fetch(email_id, 'RFC822')[0].attr['RFC822']
       mail    = Mail.read_from_string message
 
-      process_email mail
+      process_email mail, email_id
     end
+
+    @imap.expunge
   end
 
-  def process_email mail
+  def process_email mail, mail_id
     if action?(mail.from, mail.subject)
       action! mail.text_part.body.decoded
+
+      archive! mail_id
     end
   end
 
@@ -38,5 +42,12 @@ class GmailPoll
     client.add :url => data
 
     puts "Adding #{data} to Pocket"
+  end
+
+  def archive! mail_id
+    directory = '[Gmail]/All Mail'
+
+    @imap.copy(mail_id, "[Gmail]/All Mail")
+    @imap.store(mail_id, "+FLAGS", [:Deleted])
   end
 end
