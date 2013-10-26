@@ -218,6 +218,7 @@ DEPENDENCIES
   devise (~> 3.0.1)
   draper
   gmail
+  gmail_xoauth (~> 0.4.1)
   haml
   haml-rails
   interactive_editor

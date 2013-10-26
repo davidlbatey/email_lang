@@ -21,6 +21,7 @@ gem 'mysql2'
 
 # email
 gem 'gmail'
+gem 'gmail_xoauth', "~> 0.4.1"
 
 # security
 gem "devise", "~> 3.0.1"

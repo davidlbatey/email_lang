@@ -1,17 +1,29 @@
 class GmailPoll
 
   def initialize user_id
-    @white_list = User.find(user_id).contacts
-    @actons = ["read"]
+    @user        = User.find(user_id)
+    @white_list  = ["davidlbatey@gmail.com"]
+    @actions     = ["read"]
   end
 
   def start
-    gmail = Gmail.connect("ENTER EMAIL", "ENTER PASS")
+    imap      = Net::IMAP.new('imap.gmail.com', 993, usessl = true,
+                          certs = nil, verify = false)
 
-    gmail.inbox.find(:after => Date.yesterday).each do |email|
-      if action?(email.message.from, email.message.subject)
-        action! email.message.text_part.body.decoded
-      end
+    imap.authenticate('XOAUTH2', @user.email, @user.token)
+    imap.select('INBOX')
+
+    imap.search(["SINCE", Date.today.strftime('%d-%b-%Y')]).each do |email_id|
+      message = imap.fetch(email_id,'RFC822')[0].attr['RFC822']
+      mail    = Mail.read_from_string message
+
+      process_email mail
+    end
+  end
+
+  def process_email mail
+    if action?(mail.from, mail.subject)
+      action! mail.text_part.body.decoded
     end
   end
 
