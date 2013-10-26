@@ -7,6 +7,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 gem 'draper'
 gem 'haml'
+gem 'sass-rails',   '~> 4.0.0.beta1'
 
 # javascript
 gem 'jquery-rails'
@@ -44,7 +45,6 @@ group :test do
 end
 
 group :assets do
-  gem 'sass-rails',   '~> 4.0.0.beta1'
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'therubyracer', platforms: :ruby
   gem 'uglifier', '>= 1.0.3'
