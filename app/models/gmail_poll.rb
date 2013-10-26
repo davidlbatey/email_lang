@@ -1,5 +1,4 @@
 class GmailPoll
-
   def initialize user_id
     @user        = User.find(user_id)
     @white_list  = @user.contacts.pluck(:email)
