@@ -1,8 +1,11 @@
 class GmailPoll
-  WHITE_LIST = ["fraser@fraserdeans.com"]
-  ACTIONS = ["read"]
 
-  def self.start
+  def initialize user_id
+    @white_list = User.find(user_id).contacts
+    @actons = ["read"]
+  end
+
+  def start
     gmail = Gmail.connect("ENTER EMAIL", "ENTER PASS")
 
     gmail.inbox.find(:after => Date.yesterday).each do |email|
@@ -12,11 +15,11 @@ class GmailPoll
     end
   end
 
-  def self.action? from, subject
-    WHITE_LIST.include?(from[0]) && ACTIONS.include?(subject)
+  def action? from, subject
+    @white_list.include?(from[0]) && @actions.include?(subject)
   end
 
-  def self.action! data
+  def action! data
     puts "Adding to pocket #{data}"
   end
 end

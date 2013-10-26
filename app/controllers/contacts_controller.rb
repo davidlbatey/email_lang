@@ -4,8 +4,8 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all
-    @contact = Contact.new
+    @contacts = current_user.contacts.all
+    @contact = current_user.contacts.new
   end
 
   # GET /contacts/1
@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   def new
-    @contact = Contact.new
+    @contact = current_user.contacts.new
   end
 
   # GET /contacts/1/edit
@@ -25,7 +25,7 @@ class ContactsController < ApplicationController
   # POST /contacts
   # POST /contacts.json
   def create
-    @contact = Contact.new(contact_params)
+    @contact = current_user.contacts.new(contact_params)
 
     respond_to do |format|
       if @contact.save
