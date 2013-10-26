@@ -57,3 +57,5 @@ group :production do
 end
 
 gem 'unicorn'
+
+ruby "2.0.0"
