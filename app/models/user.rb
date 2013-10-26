@@ -4,9 +4,10 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:google_oauth2]
+         :omniauthable, :omniauth_providers => [:google_oauth2, :pocket]
 
   has_many :contacts
+  has_many :accounts
 
   def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info
@@ -26,4 +27,9 @@ class User < ActiveRecord::Base
     user
   end
 
+  def add_pocket auth
+    accounts.create :action => "read",
+                    :provider => "pocket",
+                    :token => auth.credentials.token
+  end
 end

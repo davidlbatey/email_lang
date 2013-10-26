@@ -27,6 +27,7 @@ gem 'gmail_xoauth', "~> 0.4.1"
 gem "devise", "~> 3.0.1"
 gem "omniauth"
 gem 'omniauth-google-oauth2'
+gem 'omniauth-pocket'
 
 group :development do
   gem 'haml-rails'

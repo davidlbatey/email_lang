@@ -129,6 +129,9 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
+    omniauth-pocket (0.1.0)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     quiet_assets (1.0.2)
@@ -227,6 +230,7 @@ DEPENDENCIES
   mysql2
   omniauth
   omniauth-google-oauth2
+  omniauth-pocket
   quiet_assets
   rack-google-analytics
   rails (= 4.0.0)

@@ -1,7 +1,5 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google_oauth2
-
-    puts request.env["omniauth.auth"]
     # You need to implement the method below in your model (e.g. app/models/user.rb)
     @user = User.find_for_google_oauth2(request.env["omniauth.auth"], current_user)
 
@@ -12,5 +10,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       session["devise.google_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
     end
+  end
+
+  def pocket
+    current_user.add_pocket request.env["omniauth.auth"]
+    redirect_to accounts_path
   end
 end

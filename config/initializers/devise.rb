@@ -232,6 +232,7 @@ Devise.setup do |config|
                                     scope: "https://mail.google.com/,
                                             https://www.googleapis.com/auth/userinfo.email,
                                             userinfo.email, userinfo.profile"}
+  config.omniauth :pocket, "19756-0fd0cddd9a3d3a85f1a47074"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
