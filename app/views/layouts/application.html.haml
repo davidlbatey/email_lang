@@ -1,10 +1,21 @@
 !!!
 %html
   %head
-    %title Base Application
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    %title Super charging your inbox | Email Lang
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
+
+    %nav.navbar.navbar-default
+      .navbar-header
+        .navbar-brand Email Lang | Super charging your inbox
+
+      %ul.nav.navbar-nav
+        %li
+          %a.active Your whitelist
+        %li
+          %a Ac
+
     .container
       .row
         .col-xs-12
