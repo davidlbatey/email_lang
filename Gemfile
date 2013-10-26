@@ -12,7 +12,6 @@ gem 'haml'
 gem 'jquery-rails'
 
 # stylesheets
-gem 'compass-rails'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'
 
