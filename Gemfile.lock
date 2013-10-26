@@ -66,6 +66,12 @@ GEM
       multi_json (~> 1.0)
     ffi (1.8.1)
     fssm (0.2.10)
+    gmail (0.4.0)
+      gmail_xoauth (>= 0.3.0)
+      mail (>= 2.2.1)
+      mime (>= 0.1)
+    gmail_xoauth (0.4.1)
+      oauth (>= 0.3.6)
     haml (4.0.2)
       tilt
     haml-rails (0.4)
@@ -87,10 +93,12 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mime (0.1)
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.7)
     mysql2 (0.3.11)
+    oauth (0.4.7)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     quiet_assets (1.0.2)
@@ -178,6 +186,7 @@ DEPENDENCIES
   debugger
   devise (~> 3.0.1)
   draper
+  gmail
   haml
   haml-rails
   interactive_editor

@@ -17,6 +17,9 @@ gem 'compass-rails'
 # databases
 gem 'mysql2'
 
+# email
+gem 'gmail'
+
 # security
 gem "devise", "~> 3.0.1"
 
