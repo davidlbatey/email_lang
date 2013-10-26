@@ -1,0 +1,13 @@
+= form_for @contact, html: {class: 'form-inline'} do |f|
+  - if @contact.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@contact.errors.count, "error")} prohibited this contact from being saved:"
+      %ul
+        - @contact.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :email
+    = f.text_field :email
+
+  = f.submit 'Save'
