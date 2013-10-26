@@ -7,7 +7,6 @@
           %li= msg
 
   .form-group
-    = f.label :email
-    = f.text_field :email
+    = f.text_field :email, placeholder: 'Email address...', class: 'form-control'
 
-  = f.submit 'Save'
+  = f.submit 'Add', class: 'btn btn-success'

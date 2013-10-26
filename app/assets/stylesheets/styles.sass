@@ -20,6 +20,18 @@ label
 input[type="checkbox"] + label
   margin-left: 5px
 
+a
+  color: white
+  text-decoration: none
+
+  &:visted
+    color: white
+
+  &:hover
+    color: white
+    text-decoration: underline
+
+
 .header
   color: $lightest
   font-size: 1.1em
@@ -73,6 +85,17 @@ input[type="checkbox"] + label
 
 .content-block__source
 
+.content-block__head
+  background: #FFF
+  padding: 15px 10px 20px 10px
+  text-align: center
+  border-top: 5px solid $light
+
+
+.content-block__stuff
+  background: white
+  padding: 10px
+
 .content-block--coming-soon
   position: relative
 
@@ -86,3 +109,26 @@ input[type="checkbox"] + label
   background: rgba(0,0,0,0.5)
   color: white
   font-weight: bold
+
+.contacts
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.contact
+  border-top: 1px solid #ccc
+  padding: 15px
+
+  a
+    color: red
+    &:visited
+      color: red
+    &:hover
+      color: red
+
+  &:last-child
+    border-bottom: 1px solid #ccc
+
+.contact-form
+  text-align: center
+  margin: 30px 0 20px
