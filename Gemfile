@@ -56,7 +56,7 @@ end
 
 group :production do
   gem 'rack-google-analytics', :require => 'rack/google-analytics'
-  # gem 'pg'
+  gem 'pg'
 end
 
 gem 'unicorn'
