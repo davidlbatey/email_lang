@@ -9,7 +9,7 @@
     .header
       .container
         .row
-          .col-xs-12
+          .col-xs-8.col-xs-offset-2
             .branding
               .branding__logo Email Lang
               .branding__slogan Super charging your inbox
@@ -17,10 +17,10 @@
             %ul.header-nav
               - if user_signed_in?
                 %li.header-nav__item
-                  = link_to "Your whitelist", contacts_path
+                  = link_to "Your Contacts", contacts_path
                   &bull;
                 %li.header-nav__item
-                  = link_to "Your accounts", accounts_path
+                  = link_to "Your Accounts", accounts_path
                   &bull;
                 %li.header-nav__item
                   = link_to "Logout", destroy_user_session_path, method: :delete

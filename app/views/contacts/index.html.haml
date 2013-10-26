@@ -1,19 +1,20 @@
 .row
-  .col-xs-12
-    %h1 Your contacts
-    %p People you add here will be able to push content to your personal feeds.
+  .col-xs-8.col-xs-offset-2
+    .content-block
+      .content-block__head
+        %h3 Your Contacts
+        %p Trusted contacts can push content to your personal feeds.
 
 
-    - if @contacts.any?
-      %table
-        - @contacts.each do |contact|
-          %tr
-            %td= contact.email
-            %td= link_to 'Remove', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      .content-block__stuff
+        - if @contacts.any?
+          %ul.contacts
+            - @contacts.each do |contact|
+              %li.contact
+                = contact.email
+                = link_to '(Remove)', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        - else
+          In order to supercharge your inbox you'll need to add a contact.
 
-      %br
-    - else
-      In order to supercharge your inbox you'll need to add a contact.
-
-    %h3 Add another contact
-    = render 'form'
+        .contact-form
+          = render 'form'
