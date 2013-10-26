@@ -6,4 +6,6 @@ EmailLang::Application.routes.draw do
   resources :contacts
 
   root to: 'pages#home'
+
+  get '/dashboard' => 'pages#dashboard'
 end
