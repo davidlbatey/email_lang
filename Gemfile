@@ -24,11 +24,16 @@ gem 'gmail_xoauth', "~> 0.4.1"
 # security
 gem "devise", "~> 3.0.1"
 gem "omniauth"
+
+# google
 gem 'omniauth-google-oauth2'
 
 # pocket
 gem 'omniauth-pocket'
 gem 'pocket-ruby'
+
+# general data
+gem 'httparty'
 
 group :development do
   gem 'haml-rails'

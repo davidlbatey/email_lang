@@ -1,12 +1,12 @@
 development:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"
   google_client: "222795100413.apps.googleusercontent.com"
-  google_secret: "bjtcLwKM8bWdgLBu7AXGmKGj"
+  google_secret: "iFfvIMljBhTBsGaHswAU4D9P"
 
 test:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"
   google_client: "222795100413.apps.googleusercontent.com"
-  google_secret: "bjtcLwKM8bWdgLBu7AXGmKGj"
+  google_secret: "FeEdG2c5qaHmsWS7CNHZl3Ff"
 
 production:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"

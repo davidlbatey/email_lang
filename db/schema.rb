@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131026165106) do
+ActiveRecord::Schema.define(version: 20131026195344) do
 
   create_table "accounts", force: true do |t|
     t.integer  "user_id"
@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 20131026165106) do
     t.string   "provider"
     t.string   "uid"
     t.string   "picture"
+    t.string   "refresh_token"
+    t.datetime "token_expire"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

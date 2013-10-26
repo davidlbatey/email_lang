@@ -85,6 +85,9 @@ GEM
       railties (>= 3.1, < 4.1)
     hashie (2.0.5)
     hike (1.2.3)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     httpauth (0.2.0)
     i18n (0.6.4)
     interactive_editor (0.0.10)
@@ -105,6 +108,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.7)
+    multi_xml (0.5.4)
     multipart-post (1.2.0)
     mysql2 (0.3.11)
     oauth (0.4.7)
@@ -223,6 +227,7 @@ DEPENDENCIES
   gmail_xoauth (~> 0.4.1)
   haml
   haml-rails
+  httparty
   interactive_editor
   jbuilder (~> 1.0.1)
   jquery-rails

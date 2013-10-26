@@ -3,6 +3,9 @@ namespace :email do
   task :check => :environment do
     User.all.each do |user|
       begin
+        # Google's stupid expiring token fix
+        user.refresh_token!
+
         gmail = GmailPoll.new user.id
         gmail.start
       rescue Exception => e
