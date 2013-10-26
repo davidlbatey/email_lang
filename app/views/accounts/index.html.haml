@@ -1,3 +1,14 @@
-%h1 Accounts#index
+.row
+  .col-xs-8.col-xs-offset-2
+    .content-block
+      .content-block__head
+        %h3 Your Accounts
+        %p A list of accounts you can link to Email Lang.
 
-= link_to "Add pocket", user_omniauth_authorize_path(:provider => "pocket")
+
+      .content-block__stuff
+        %ul.contacts
+          %li.contact
+            = link_to "Add pocket", user_omniauth_authorize_path(:provider => "pocket")
+
+
