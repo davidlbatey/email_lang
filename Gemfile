@@ -24,6 +24,8 @@ gem 'gmail'
 
 # security
 gem "devise", "~> 3.0.1"
+gem "omniauth"
+gem 'omniauth-google-oauth2'
 
 group :development do
   gem 'haml-rails'
