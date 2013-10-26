@@ -6,23 +6,26 @@
     = csrf_meta_tags
   %body
 
-    %nav.navbar.navbar-default
+    .header
       .container
         .row
           .col-xs-12
-            .navbar-header
-              .navbar-brand Email Lang | Super charging your inbox
+            .branding
+              .branding__logo Email Lang
+              .branding__slogan Super charging your inbox
 
-            %ul.nav.navbar-nav
+            %ul.header-nav
               - if user_signed_in?
-                %li
+                %li.header-nav__item
                   = link_to "Your whitelist", contacts_path
-                %li
+                  &bull;
+                %li.header-nav__item
                   = link_to "Your accounts", accounts_path
-                %li
+                  &bull;
+                %li.header-nav__item
                   = link_to "Logout", destroy_user_session_path, method: :delete
               - else
-                %li
+                %li.header-nav__item
                   = link_to "Login", new_user_session_path
 
     .container

@@ -1,20 +1,88 @@
+$darkest: #2D3F40
+$dark: #636466
+$light: #96D3D4
+$lightest: #FFF
+$highlight: #8EC447
+
+@import url(http://fonts.googleapis.com/css?family=Fenix)
+
+html,
+body
+  height: 100%
+  font-family: 'Open Sans', Helvetica, Arials, sans-serif
+
+body
+  background: $darkest
+
+label
+  font-weight: normal
+
+input[type="checkbox"] + label
+  margin-left: 5px
+
+.header
+  color: $lightest
+  font-size: 1.1em
+  padding: 20px 0
+
+.branding
+  float: left
+
+.branding__logo
+  font-weight: bold
+  font-size: 1.5em
+
+.branding__slogan
+  font-size: 1.3em
+
+.header-nav
+  margin: 0
+  padding: 0
+  display: inline-block
+  float: right
+  height: 100%
+
+.header-nav__item
+  display: inline-block
+  height: 100%
+  padding: 20px 0
+
 .content-block
-  border: 1px solid #ccc
-  padding: 10px
-  margin: 10px 0
+  margin: 15px 0
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3)
 
 .content-block__header
   text-transform: uppercase
   text-align: center
+  background: $light
+  padding: 20px 0
+  color: #fff
+  letter-spacing: 1px
+  font-size: 1.15em
 
 .content-block__app
   height: 100px
-  background: green
-  margin: 10px 0
+  background: #eee
+  padding: 10px
+  background: $light
 
 .content-block__sources
   list-style-type: none
-  margin: 0
-  padding: 0
+  padding: 10px
+  background: $lightest
 
 .content-block__source
+
+.content-block--coming-soon
+  position: relative
+
+.content-block__message
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  z-index: 1
+  background: rgba(0,0,0,0.5)
+  color: white
+  font-weight: bold
