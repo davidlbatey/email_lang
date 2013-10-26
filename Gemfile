@@ -16,8 +16,6 @@ gem 'compass-rails'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'
 
-# databases
-gem 'mysql2'
 
 # email
 gem 'gmail'
@@ -31,6 +29,7 @@ gem 'omniauth-google-oauth2'
 group :development do
   gem 'haml-rails'
   gem 'rspec-rails', '>= 2.10.1'
+  gem 'mysql2'
 
   gem "quiet_assets"
   gem "awesome_print"
@@ -54,6 +53,7 @@ end
 
 group :production do
   gem 'rack-google-analytics', :require => 'rack/google-analytics'
+  gem 'pg'
 end
 
 gem 'unicorn'
