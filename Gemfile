@@ -25,7 +25,10 @@ gem 'gmail_xoauth', "~> 0.4.1"
 gem "devise", "~> 3.0.1"
 gem "omniauth"
 gem 'omniauth-google-oauth2'
+
+# pocket
 gem 'omniauth-pocket'
+gem 'pocket-ruby'
 
 group :development do
   gem 'haml-rails'
@@ -53,7 +56,7 @@ end
 
 group :production do
   gem 'rack-google-analytics', :require => 'rack/google-analytics'
-  gem 'pg'
+  # gem 'pg'
 end
 
 gem 'unicorn'

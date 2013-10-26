@@ -67,6 +67,8 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
     ffi (1.8.1)
     gmail (0.4.0)
       gmail_xoauth (>= 0.3.0)
@@ -125,7 +127,11 @@ GEM
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
     orm_adapter (0.4.0)
-    pg (0.15.1)
+    pocket-ruby (0.0.4)
+      faraday (>= 0.7, < 0.9)
+      faraday_middleware (~> 0.8)
+      hashie (>= 0.4.0)
+      multi_json (~> 1.0, >= 1.0.3)
     polyglot (0.3.3)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
@@ -223,7 +229,7 @@ DEPENDENCIES
   omniauth
   omniauth-google-oauth2
   omniauth-pocket
-  pg
+  pocket-ruby
   quiet_assets
   rack-google-analytics
   rails (= 4.0.0)

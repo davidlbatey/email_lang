@@ -32,6 +32,12 @@ class GmailPoll
   end
 
   def action! data
-    puts "Adding to pocket #{data}"
+    pocket_account = @user.accounts.first
+
+    client = Pocket.client(:access_token => pocket_account.token)
+
+    client.add :url => data
+
+    puts "Adding #{data} to Pocket"
   end
 end
