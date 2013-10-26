@@ -1,4 +1,10 @@
-email_lang
-==========
+EmailLang
+======
 
-Email language for trusted contacts
+My prefered base rails app.
+
+To bootstrap a new app:
+
+```ruby
+bundle exec ruby bootstrap.rb NewApp
+```
