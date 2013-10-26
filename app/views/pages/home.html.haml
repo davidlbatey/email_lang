@@ -1,6 +1,8 @@
 .row
-  .col-xs-12
-    %h1 Email Lang
-    %p Get shared content out of your inbox into your preferred apps
+  .col-xs-8.col-xs-offset-2
+    .content-block
+      .content-block__head
+        %h1 Email Lang
+        %p Get shared content out of your inbox into your preferred apps
 
-    = link_to "Get started for free, login with Gmail", user_omniauth_authorize_path('google_oauth2'), class: 'btn btn-primary'
+        = link_to "Get started for free, login with Gmail", user_omniauth_authorize_path('google_oauth2'), class: 'btn btn-primary'
