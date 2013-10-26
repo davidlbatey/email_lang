@@ -8,4 +8,6 @@ EmailLang::Application.routes.draw do
   resources :accounts, :only => [:index]
 
   root to: 'pages#home'
+
+  get '/dashboard' => 'pages#dashboard'
 end

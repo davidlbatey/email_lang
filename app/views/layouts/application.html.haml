@@ -26,8 +26,6 @@
                   = link_to "Login", new_user_session_path
 
     .container
-      .row
-        .col-xs-12
-          = yield
+      = yield
 
 = javascript_include_tag "application", "data-turbolinks-track" => true

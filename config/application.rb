@@ -29,5 +29,7 @@ module EmailLang
     end
 
     config.sass.preferred_syntax = :sass
+
+    config.assets.initialize_on_precompile = false
   end
 end
