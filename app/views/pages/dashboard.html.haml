@@ -12,12 +12,12 @@
         %i.glyphicon.glyphicon-book
         Read
       .content-block__app
-        .app.app--active
+        .app{:class => "#{'app--active' if current_user.accounts.where(:action=> 'read', :provider => "pocket").present?}"}
           .app__icon
             = image_tag 'icon-pocket.png'
           .app__name Pocket
 
-        .app
+        .app{:class => "#{'app--active' if current_user.accounts.where(:action=> 'read', :provider => "readability").present?}"}
           .app__icon
             = image_tag 'icon-readability.png'
           .app__name Readability
@@ -26,21 +26,20 @@
   .col-xs-4
     .content-block
       .content-block__header
-        %i.glyphicon.glyphicon-music
-        Listen
+        %i.glyphicon.glyphicon-eye-open
+          Watch
       .content-block__app
         .coming-soon
-          (MUSIC COMING SOON)
 
 .row
   .col-xs-4.col-xs-offset-2
     .content-block
       .content-block__header
-        %i.glyphicon.glyphicon-eye-open
-        Watch
+        %i.glyphicon.glyphicon-music
+          Listen
       .content-block__app
         .coming-soon
-          (VIDEO COMING SOON)
+          (MUSIC COMING SOON)
 
   .col-xs-4
     .content-block
