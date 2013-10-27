@@ -25,7 +25,8 @@ class User < ActiveRecord::Base
                           token_expire: Time.at(access_token.credentials.expires_at)
                         )
     else
-      user.update token: access_token.credentials.token
+      user.update token: access_token.credentials.token,
+                  token_expire: Time.at(access_token.credentials.expires_at)
     end
 
     user

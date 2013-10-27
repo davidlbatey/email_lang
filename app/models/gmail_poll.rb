@@ -12,7 +12,7 @@ class GmailPoll
     @imap.authenticate('XOAUTH2', @user.email, @user.token)
     @imap.select('INBOX')
 
-    @imap.search(["SINCE", Date.today.strftime('%d-%b-%Y')]).each do |email_id|
+    @imap.search(["SINCE", Date.yesterday.strftime('%d-%b-%Y')]).each do |email_id|
       message = @imap.fetch(email_id, 'RFC822')[0].attr['RFC822']
       mail    = Mail.read_from_string message
 
@@ -26,7 +26,7 @@ class GmailPoll
     if action?(mail.from, mail.subject)
       account = @user.accounts.where(:action => mail.subject).first
 
-      acount.action! mail.text_part.body.decoded
+      account.action! mail.text_part.body.decoded.strip
 
       archive! mail_id
     end
