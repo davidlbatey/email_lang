@@ -41,8 +41,8 @@ class Account < ActiveRecord::Base
   def vimeo query
     client = Vimeo::Advanced::Video.new(AppConfig.vimeo_key,
                                         AppConfig.vimeo_secret,
-                                        token: account.token,
-                                        secret: account.secret)
+                                        token: token,
+                                        secret: secret)
 
     results = client.search(query, {:page => "1",
                                     :per_page => "1",
@@ -52,8 +52,8 @@ class Account < ActiveRecord::Base
 
     albums = Vimeo::Advanced::Album.new(AppConfig.vimeo_key,
                                         AppConfig.vimeo_secret,
-                                        token: account.token,
-                                        secret: account.secret)
+                                        token: token,
+                                        secret: secret)
     albums.add_to_watch_later(video_id)
   end
 
