@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:google_oauth2, :pocket]
+         :omniauthable, :omniauth_providers => [:google_oauth2, :pocket, :readability]
 
   has_many :contacts, :dependent => :destroy
   has_many :accounts, :dependent => :destroy
@@ -47,6 +47,13 @@ class User < ActiveRecord::Base
     accounts.create :action => "read",
                     :provider => "pocket",
                     :token => auth.credentials.token
+  end
+
+  def add_readability auth
+    accounts.create :action => "read",
+                    :provider => "readability",
+                    :token => auth.credentials.token,
+                    :secret => auth.credentials.secret
   end
 
   private

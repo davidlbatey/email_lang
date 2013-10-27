@@ -45,8 +45,6 @@ class GmailPoll
   end
 
   def archive! mail_id
-    directory = '[Gmail]/All Mail'
-
     @imap.copy(mail_id, "[Gmail]/All Mail")
     @imap.store(mail_id, "+FLAGS", [:Deleted])
   end

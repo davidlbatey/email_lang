@@ -2,13 +2,20 @@ development:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"
   google_client: "222795100413.apps.googleusercontent.com"
   google_secret: "iFfvIMljBhTBsGaHswAU4D9P"
+  readability_key: "davidlbatey"
+  readability_secret: "P335XvctUPhg7qLF8MZBfxjLFPwhVN9z"
 
 test:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"
   google_client: "222795100413.apps.googleusercontent.com"
   google_secret: "FeEdG2c5qaHmsWS7CNHZl3Ff"
+  readability_key: "davidlbatey"
+  readability_secret: "P335XvctUPhg7qLF8MZBfxjLFPwhVN9z"
+
 
 production:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"
   google_client: "222795100413-rcgqhu4qt865174qo6ikcprntcf3o32k.apps.googleusercontent.com"
   google_secret: "jcrljS5CkSEh49NHx1aFwhZq"
+  readability_key: "davidlbatey"
+  readability_secret: "P335XvctUPhg7qLF8MZBfxjLFPwhVN9z"

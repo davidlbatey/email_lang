@@ -6,6 +6,24 @@ GIT
       railties (>= 3.0)
       sass (>= 3.2)
 
+GIT
+  remote: git@github.com:29decibel/readit.git
+  revision: f352941719e54cd05c241e56571fd160ab456aa4
+  specs:
+    readit (0.1.0)
+      hashie
+      multi_json
+      oauth
+
+GIT
+  remote: git@github.com:davidlbatey/omniauth-readability.git
+  revision: f21ec4702888a7acaa6e8f55b01155178bff2451
+  specs:
+    omniauth-readability (0.0.2)
+      multi_json
+      omniauth (>= 0.2.6)
+      omniauth-oauth
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -124,6 +142,9 @@ GEM
     omniauth-google-oauth2 (0.2.1)
       omniauth (~> 1.0)
       omniauth-oauth2
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
@@ -235,11 +256,13 @@ DEPENDENCIES
   omniauth
   omniauth-google-oauth2
   omniauth-pocket
+  omniauth-readability!
   pg
   pocket-ruby
   quiet_assets
   rack-google-analytics
   rails (= 4.0.0)
+  readit!
   rspec-rails (>= 2.10.1)
   sass-rails (~> 4.0.0.beta1)
   sqlite3

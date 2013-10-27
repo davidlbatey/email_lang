@@ -233,6 +233,8 @@ Devise.setup do |config|
                                             userinfo.email, userinfo.profile"}
   config.omniauth :pocket, AppConfig.pocket
 
+  config.omniauth :readability, AppConfig.readability_key, AppConfig.readability_secret
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

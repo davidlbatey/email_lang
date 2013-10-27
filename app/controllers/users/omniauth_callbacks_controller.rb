@@ -18,4 +18,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     current_user.add_pocket request.env["omniauth.auth"]
     redirect_to accounts_path
   end
+
+  def readability
+    current_user.add_readability request.env["omniauth.auth"]
+    redirect_to accounts_path
+  end
 end
