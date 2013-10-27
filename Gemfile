@@ -36,6 +36,8 @@ gem 'pocket-ruby'
 gem 'readit',:git=>'git://github.com/29decibel/readit.git'
 gem 'omniauth-readability', :git=>'git://github.com/davidlbatey/omniauth-readability.git'
 
+# spotify
+
 # general data
 gem 'httparty'
 
