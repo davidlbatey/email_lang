@@ -10,7 +10,7 @@ class Account < ActiveRecord::Base
       youtube message
     end
 
-    notify url
+    notify message
   end
 
   def pocket url
@@ -29,7 +29,7 @@ class Account < ActiveRecord::Base
                                          client_secret: AppConfig.google_secret,
                                          dev_key: AppConfig.youtube_key)
 
-    videos = client.videos_by(:query => search, :page => 1, :per_page => 1)
+    response = client.videos_by(:query => search, :page => 1, :per_page => 1)
 
     video_id = response.videos.first.video_id
 
