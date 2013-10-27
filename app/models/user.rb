@@ -47,23 +47,33 @@ class User < ActiveRecord::Base
   end
 
   def add_pocket auth
-    accounts.create :action => "read",
-                    :provider => "pocket",
-                    :token => auth.credentials.token
+    account = accounts.where(:action => "read").first_or_create
+
+    account.provider = "pocket"
+    account.token    = auth.credentials.token
+    account.secret   = nil
+
+    account.save
   end
 
   def add_readability auth
-    accounts.create :action => "read",
-                    :provider => "readability",
-                    :token => auth.credentials.token,
-                    :secret => auth.credentials.secret
+    account = accounts.where(:action => "read").first_or_create
+
+    account.provider = "readability"
+    account.token    = auth.credentials.token
+    account.secret   = auth.credentials.secret
+
+    account.save
   end
 
   def add_vimeo auth
-    accounts.create :action => "watch",
-                    :provider => "vimeo",
-                    :token => auth.credentials.token,
-                    :secret => auth.credentials.secret
+    account = accounts.where(:action => "watch").first_or_create
+
+    account.provider = "vimeo"
+    account.token    = auth.credentials.token
+    account.secret   = auth.credentials.secret
+
+    account.save
   end
 
   private

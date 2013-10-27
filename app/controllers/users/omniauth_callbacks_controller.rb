@@ -16,16 +16,16 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def pocket
     current_user.add_pocket request.env["omniauth.auth"]
-    redirect_to accounts_path
+    redirect_to dashboard_path
   end
 
   def readability
     current_user.add_readability request.env["omniauth.auth"]
-    redirect_to accounts_path
+    redirect_to dashboard_path
   end
 
   def vimeo
     current_user.add_vimeo request.env["omniauth.auth"]
-    redirect_to accounts_path
+    redirect_to dashboard_path
   end
 end

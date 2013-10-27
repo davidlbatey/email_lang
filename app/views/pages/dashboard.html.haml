@@ -12,15 +12,17 @@
         %i.glyphicon.glyphicon-book
         Read
       .content-block__app
-        .app{:class => "#{'app--active' if current_user.accounts.where(:action=> 'read', :provider => "pocket").present?}"}
-          .app__icon
-            = image_tag 'icon-pocket.png'
-          .app__name Pocket
+        = link_to user_omniauth_authorize_path(:provider => "pocket") do
+          .app{:class => "#{'app--active' if current_user.accounts.where(:action=> 'read', :provider => "pocket").present?}"}
+            .app__icon
+              = image_tag 'icon-pocket.png'
+            .app__name Pocket
 
-        .app{:class => "#{'app--active' if current_user.accounts.where(:action=> 'read', :provider => "readability").present?}"}
-          .app__icon
-            = image_tag 'icon-readability.png'
-          .app__name Readability
+        = link_to user_omniauth_authorize_path(:provider => "readability") do
+          .app{:class => "#{'app--active' if current_user.accounts.where(:action=> 'read', :provider => "readability").present?}"}
+            .app__icon
+              = image_tag 'icon-readability.png'
+            .app__name Readability
 
 
   .col-xs-4
