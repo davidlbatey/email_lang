@@ -29,7 +29,7 @@
     .content-block
       .content-block__header
         %i.glyphicon.glyphicon-eye-open
-          Watch
+        Watch
       .content-block__app
         = link_to user_omniauth_authorize_path(:provider => "vimeo") do
           .app{:class => "#{'app--active' if current_user.accounts.where(:action=> 'watch', :provider => "vimeo").present?}"}

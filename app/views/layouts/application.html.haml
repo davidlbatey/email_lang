@@ -11,8 +11,8 @@
         .row
           .col-xs-8.col-xs-offset-2
             .branding
-              .branding__logo Email Lang
-              .branding__slogan Super charge your inbox
+              .branding__logo
+                = image_tag 'logo.png'
 
             %ul.header-nav
               - if user_signed_in?
