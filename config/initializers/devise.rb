@@ -230,6 +230,8 @@ Devise.setup do |config|
                                   { access_type: "offline", approval_prompt: "",
                                     scope: "https://mail.google.com/,
                                             https://www.googleapis.com/auth/userinfo.email,
+                                            https://www.googleapis.com/auth/youtube,
+                                            https://www.googleapis.com/auth/youtube.upload,
                                             userinfo.email, userinfo.profile"}
   config.omniauth :pocket, AppConfig.pocket
 

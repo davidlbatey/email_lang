@@ -1,7 +1,8 @@
 development:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"
   google_client: "222795100413.apps.googleusercontent.com"
-  google_secret: "iFfvIMljBhTBsGaHswAU4D9P"
+  google_secret: "qhd6WGP4niEXwqmdftKVqCDB"
+  youtube_key: "AIzaSyC1mWdns005rF3InuQ-rCU8Ye1q1UrmReE"
   readability_key: "davidlbatey"
   readability_secret: "P335XvctUPhg7qLF8MZBfxjLFPwhVN9z"
 
@@ -9,6 +10,7 @@ test:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"
   google_client: "222795100413.apps.googleusercontent.com"
   google_secret: "FeEdG2c5qaHmsWS7CNHZl3Ff"
+  youtube_key: "AIzaSyC1mWdns005rF3InuQ-rCU8Ye1q1UrmReE"
   readability_key: "davidlbatey"
   readability_secret: "P335XvctUPhg7qLF8MZBfxjLFPwhVN9z"
 
@@ -17,5 +19,6 @@ production:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"
   google_client: "222795100413-rcgqhu4qt865174qo6ikcprntcf3o32k.apps.googleusercontent.com"
   google_secret: "jcrljS5CkSEh49NHx1aFwhZq"
+  youtube_key: "AIzaSyCO-eo9S7_JbDwfHMfWYK_02ZTGYmQLp-M"
   readability_key: "davidlbatey"
   readability_secret: "P335XvctUPhg7qLF8MZBfxjLFPwhVN9z"

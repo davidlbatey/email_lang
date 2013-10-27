@@ -38,6 +38,9 @@ gem 'omniauth-readability', :git=>'git://github.com/davidlbatey/omniauth-readabi
 
 # spotify
 
+# youtube
+gem "youtube_it"
+
 # general data
 gem 'httparty'
 

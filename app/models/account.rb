@@ -1,11 +1,13 @@
 class Account < ActiveRecord::Base
   belongs_to :user
 
-  def action! url
+  def action! message
     if provider == "pocket"
-      pocket url
-    else
-      readability url
+      pocket message
+    elsif provider == "readability"
+      readability message
+    elsif provider == "youtube"
+      youtube message
     end
 
     notify url
@@ -19,6 +21,19 @@ class Account < ActiveRecord::Base
   def readability url
     client = Readit::API.new token, secret
     client.bookmark :url => url
+  end
+
+  def youtube search
+    client = YouTubeIt::OAuth2Client.new(client_access_token: user.token,
+                                         client_id: AppConfig.google_client,
+                                         client_secret: AppConfig.google_secret,
+                                         dev_key: AppConfig.youtube_key)
+
+    videos = client.videos_by(:query => search, :page => 1, :per_page => 1)
+
+    video_id = response.videos.first.video_id
+
+    client.add_video_to_watchlater(video_id)
   end
 
   private
