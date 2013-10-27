@@ -1,13 +1,5 @@
 GIT
-  remote: git://github.com/anjlab/bootstrap-rails.git
-  revision: 4f5c0167fc7722940f67701a5279a9427692d92f
-  specs:
-    anjlab-bootstrap-rails (3.0.0.3)
-      railties (>= 3.0)
-      sass (>= 3.2)
-
-GIT
-  remote: git@github.com:29decibel/readit.git
+  remote: git://github.com/29decibel/readit.git
   revision: f352941719e54cd05c241e56571fd160ab456aa4
   specs:
     readit (0.1.0)
@@ -16,7 +8,15 @@ GIT
       oauth
 
 GIT
-  remote: git@github.com:davidlbatey/omniauth-readability.git
+  remote: git://github.com/anjlab/bootstrap-rails.git
+  revision: 4f5c0167fc7722940f67701a5279a9427692d92f
+  specs:
+    anjlab-bootstrap-rails (3.0.0.3)
+      railties (>= 3.0)
+      sass (>= 3.2)
+
+GIT
+  remote: git://github.com/davidlbatey/omniauth-readability.git
   revision: f21ec4702888a7acaa6e8f55b01155178bff2451
   specs:
     omniauth-readability (0.0.2)

@@ -33,8 +33,8 @@ gem 'omniauth-pocket'
 gem 'pocket-ruby'
 
 # readability
-gem 'readit',:git=>'git@github.com:29decibel/readit.git'
-gem 'omniauth-readability', :git=>'git@github.com:davidlbatey/omniauth-readability.git'
+gem 'readit',:git=>'git://github.com/29decibel/readit.git'
+gem 'omniauth-readability', :git=>'git://github.com/davidlbatey/omniauth-readability.git'
 
 # general data
 gem 'httparty'
