@@ -8,6 +8,8 @@ class Account < ActiveRecord::Base
       readability message
     elsif provider == "youtube"
       youtube message
+    elsif provider == "vimeo"
+      vimeo message
     end
 
     notify message
