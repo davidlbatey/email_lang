@@ -24,7 +24,9 @@ class GmailPoll
 
   def process_email mail, mail_id
     if action?(mail.from, mail.subject)
-      action! mail.text_part.body.decoded
+      account = @user.accounts.where(:action => mail.subject).first
+
+      acount.action! mail.text_part.body.decoded
 
       archive! mail_id
     end
@@ -32,16 +34,6 @@ class GmailPoll
 
   def action? from, subject
     @white_list.include?(from[0]) && @actions.include?(subject)
-  end
-
-  def action! data
-    pocket_account = @user.accounts.first
-
-    client = Pocket.client(:access_token => pocket_account.token)
-
-    client.add :url => data
-
-    puts "Adding #{data} to Pocket"
   end
 
   def archive! mail_id

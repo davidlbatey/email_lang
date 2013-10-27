@@ -5,7 +5,7 @@ class Account < ActiveRecord::Base
     if provider == "pocket"
       pocket url
     else
-      instapaper url
+      readability url
     end
 
     notify url
@@ -17,19 +17,13 @@ class Account < ActiveRecord::Base
   end
 
   def readability url
+    client = Readit::API.new token, secret
+    client.bookmark :url => url
   end
 
   private
 
   def notify url
     puts "Adding #{url} to #{provider}"
-  end
-
-  def encrypt password
-
-  end
-
-  def decrypt password
-
   end
 end
