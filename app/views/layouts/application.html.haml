@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Super charging your inbox | Email Lang
+    %title Super charge your inbox | Email Lang
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
@@ -12,10 +12,13 @@
           .col-xs-8.col-xs-offset-2
             .branding
               .branding__logo Email Lang
-              .branding__slogan Super charging your inbox
+              .branding__slogan Super charge your inbox
 
             %ul.header-nav
               - if user_signed_in?
+                %li.header-nav__item
+                  = link_to "Home", dashboard_path
+                  &bull;
                 %li.header-nav__item
                   = link_to "Your Contacts", contacts_path
                   &bull;
