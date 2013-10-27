@@ -1,15 +1,27 @@
 .row
+  .col-xs-8.col-xs-offset-2
+    .content-block
+      .content-block__head
+        %p
+          %i Select services to better consume your shared email content with.
+
+.row
   .col-xs-4.col-xs-offset-2
     .content-block
       .content-block__header
         %i.glyphicon.glyphicon-book
         Read
       .content-block__app
-      %ul.content-block__sources
-        - @contacts.each do |contact|
-          %li.content-block__source
-            %input(type='checkbox')
-            %label= contact.email
+        .app.app--active
+          .app__icon
+            = image_tag 'icon-pocket.png'
+          .app__name Pocket
+
+        .app
+          .app__icon
+            = image_tag 'icon-readability.png'
+          .app__name Readability
+
 
   .col-xs-4
     .content-block
@@ -17,11 +29,8 @@
         %i.glyphicon.glyphicon-music
         Listen
       .content-block__app
-      %ul.content-block__sources
-        - @contacts.each do |contact|
-          %li.content-block__source
-            %input(type='checkbox')
-            %label= contact.email
+        .coming-soon
+          (MUSIC COMING SOON)
 
 .row
   .col-xs-4.col-xs-offset-2
@@ -30,11 +39,8 @@
         %i.glyphicon.glyphicon-eye-open
         Watch
       .content-block__app
-      %ul.content-block__sources
-        - @contacts.each do |contact|
-          %li.content-block__source
-            %input(type='checkbox')
-            %label= contact.email
+        .coming-soon
+          (VIDEO COMING SOON)
 
   .col-xs-4
     .content-block
@@ -42,11 +48,8 @@
         %i.glyphicon.glyphicon-list
         Do
       .content-block__app
-      %ul.content-block__sources
-        - @contacts.each do |contact|
-          %li.content-block__source
-            %input(type='checkbox')
-            %label= contact.email
+        .coming-soon
+          (TASKS COMING SOON)
 
 .row
   .col-xs-4.col-xs-offset-2
@@ -55,11 +58,8 @@
         %i.glyphicon.glyphicon-share-alt
         Share
       .content-block__app
-      %ul.content-block__sources
-        - @contacts.each do |contact|
-          %li.content-block__source
-            %input(type='checkbox')
-            %label= contact.email
+        .coming-soon
+          (SOCIAL COMING SOON)
 
   .col-xs-4
     .content-block
@@ -67,8 +67,5 @@
         %i.glyphicon.glyphicon-calendar
         Meet
       .content-block__app
-      %ul.content-block__sources
-        - @contacts.each do |contact|
-          %li.content-block__source
-            %input(type='checkbox')
-            %label= contact.email
+        .coming-soon
+          (MEETINGS COMING SOON)
