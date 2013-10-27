@@ -6,6 +6,11 @@ EmailLang::Application.routes.draw do
              }
   resources :contacts
   resources :accounts, :only => [:index]
+  resources :users, :only => [] do
+    collection do
+      get 'youtube'
+    end
+  end
 
   root to: 'pages#home'
 

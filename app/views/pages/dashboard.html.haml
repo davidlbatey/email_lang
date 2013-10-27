@@ -31,7 +31,17 @@
         %i.glyphicon.glyphicon-eye-open
           Watch
       .content-block__app
-        .coming-soon
+        = link_to user_omniauth_authorize_path(:provider => "vimeo") do
+          .app{:class => "#{'app--active' if current_user.accounts.where(:action=> 'watch', :provider => "vimeo").present?}"}
+            .app__icon
+              = image_tag 'icon-vimeo.png'
+            .app__name Vimeo
+
+        = link_to youtube_users_path do
+          .app{:class => "#{'app--active' if current_user.accounts.where(:action=> 'watch', :provider => "youtube").present?}"}
+            .app__icon
+              = image_tag 'icon-youtube.png'
+            .app__name YouTube
 
 .row
   .col-xs-4.col-xs-offset-2
@@ -40,8 +50,10 @@
         %i.glyphicon.glyphicon-music
           Listen
       .content-block__app
-        .coming-soon
-          (MUSIC COMING SOON)
+        .app.app--active
+          .app__icon
+            = image_tag 'icon-youtube.png'
+          .app__name YouTube
 
   .col-xs-4
     .content-block

@@ -76,6 +76,15 @@ class User < ActiveRecord::Base
     account.save
   end
 
+  def add_youtube
+    account = accounts.where(:action => "watch").first_or_create
+    account.provider = "youtube"
+    account.token    = nil
+    account.secret   = nil
+
+    account.save
+  end
+
   private
 
   def token_data
