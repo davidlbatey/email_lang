@@ -237,6 +237,8 @@ Devise.setup do |config|
 
   config.omniauth :readability, AppConfig.readability_key, AppConfig.readability_secret
 
+  config.omniauth :vimeo, AppConfig.vimeo_key, AppConfig.vimeo_secret, authorize_params: {permission: "write"}
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

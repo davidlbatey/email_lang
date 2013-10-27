@@ -41,6 +41,10 @@ gem 'omniauth-readability', :git=>'git://github.com/davidlbatey/omniauth-readabi
 # youtube
 gem "youtube_it"
 
+# vimeo
+gem 'omniauth-vimeo'
+gem 'vimeo'
+
 # general data
 gem 'httparty'
 

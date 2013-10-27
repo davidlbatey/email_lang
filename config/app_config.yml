@@ -5,6 +5,8 @@ development:
   youtube_key: "AIzaSyC1mWdns005rF3InuQ-rCU8Ye1q1UrmReE"
   readability_key: "davidlbatey"
   readability_secret: "P335XvctUPhg7qLF8MZBfxjLFPwhVN9z"
+  vimeo_key: "40764cbd98705390c512689bf048cbe234ddf670"
+  vimeo_secret: "5be64718ab8a50b7bbc0ee34fc03527d43cdca31"
 
 test:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"
@@ -13,7 +15,8 @@ test:
   youtube_key: "AIzaSyC1mWdns005rF3InuQ-rCU8Ye1q1UrmReE"
   readability_key: "davidlbatey"
   readability_secret: "P335XvctUPhg7qLF8MZBfxjLFPwhVN9z"
-
+  vimeo_key: "40764cbd98705390c512689bf048cbe234ddf670"
+  vimeo_secret: "5be64718ab8a50b7bbc0ee34fc03527d43cdca31"
 
 production:
   pocket: "19756-0fd0cddd9a3d3a85f1a47074"
@@ -22,3 +25,5 @@ production:
   youtube_key: "AIzaSyCO-eo9S7_JbDwfHMfWYK_02ZTGYmQLp-M"
   readability_key: "davidlbatey"
   readability_secret: "P335XvctUPhg7qLF8MZBfxjLFPwhVN9z"
+  vimeo_key: "40764cbd98705390c512689bf048cbe234ddf670"
+  vimeo_secret: "5be64718ab8a50b7bbc0ee34fc03527d43cdca31"
